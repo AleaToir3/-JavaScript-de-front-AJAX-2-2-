@@ -1,5 +1,5 @@
-<tr class="mail-<%=email.id%>">
+<tr class="mail-<%=email.id%> table-warning">
  <td><%= link_to(email.object, email_path(email.id), method: :get, remote: true) %></td>
 
-  <td><%= link_to(email.body, email_path(email.id), method: :get, remote: true) %></td>
+  <td class="font-weight-bold"><%= link_to(email.body, email_path(email.id), method: :get, remote: true) %></td>
 </tr>
