@@ -1,0 +1,17 @@
+
+<% if !@email.read %>
+  row = document.getElementsByClassName("mail-<%=@email.id%>")[0]
+  row.classList.add('table-warning')
+  row.children[1].classList.add('font-weight-bold')
+
+  button = document.getElementsByClassName("read")[0]
+  button.textContent = "Lu"
+
+<% else %>
+
+  row = document.getElementsByClassName("mail-<%=@email.id%>")[0]
+  row.classList.remove('table-warning')
+  row.children[1].classList.remove('font-weight-bold')
+  button = document.getElementsByClassName("read")[0]
+  button.textContent = "Non Lu"
+<%end%>

@@ -1,0 +1,13 @@
+<%# Remove table-warning and bold when read email %>
+row = document.getElementsByClassName("mail-<%=@email.id%>")[0]
+row.classList.remove('table-warning')
+row.children[1].classList.remove('font-weight-bold')
+
+<%# Select div showMail %>
+node = document.getElementsByClassName('showMail')[0]
+
+<%# Clear child content %>
+node.innerHTML = "";
+
+<%# Show email %>
+node.insertAdjacentHTML("beforeend", "<%= j render 'emailShow', email: @email %>")

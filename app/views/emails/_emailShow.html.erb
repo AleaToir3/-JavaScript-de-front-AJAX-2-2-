@@ -1,0 +1,11 @@
+<h3><%=email.object%></h3>
+<p><%=email.body%></p>
+
+
+<%= link_to edit_email_path(email.id), method: :get , :remote => true do %> 
+  <button class="btn btn-primary read">Non Lu</button>
+<%end%>
+
+<%= link_to email_path(email.id), method: :delete, class: 'link-delete', :remote => true do %> 
+  <button class="btn btn-danger">Supprimer</button>
+<%end%>
